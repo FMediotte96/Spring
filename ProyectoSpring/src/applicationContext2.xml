@@ -12,7 +12,7 @@
 	<bean id="miInforme" class="com.facu.domain.Informe" />
 	
 	<!-- Uso esta inyección cuando lo uso en modo setter -->
-	<bean id="miSecretarioEmpleado" class="com.facu.domain.SecretarioEmpleado" scope=prototype>
+	<bean id="miSecretarioEmpleado" class="com.facu.domain.SecretarioEmpleado" scope="prototype">
 		<!-- Inyeccion por setter -->
 		<property name="informeNuevo" ref="miInforme" />
 	</bean>
