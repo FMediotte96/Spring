@@ -41,4 +41,16 @@ public class DirectorEmpleado implements Empleados {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 	
+	//Método Init. Ejecutar tareaas antes de que el bean esté disponible.
+	public void init() {
+		System.out.println("Dentro del método init. Van las tareas a "
+				+ "ejecutar antes de que el bean este listo.");
+	}
+	
+	//Método destroy. Ejecutar tareas después de que el bean haya sido utilizado.
+	public void destroy() {
+		System.out.println("Dentro del método destroy. Van las tareas a "
+				+ "ejecutar después de utilizar el bean.");
+	}
+	
 }

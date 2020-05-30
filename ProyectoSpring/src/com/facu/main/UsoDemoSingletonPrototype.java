@@ -32,6 +32,7 @@ public class UsoDemoSingletonPrototype {
 			System.out.println("No se trata del mismo objeto");
 		}*/
 		
+		context.close();
 	}
 
 }
