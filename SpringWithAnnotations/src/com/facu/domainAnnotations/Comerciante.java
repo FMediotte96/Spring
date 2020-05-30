@@ -15,16 +15,22 @@ import com.facu.interfaces.Empleados;
 @Component
 public class Comerciante implements Empleados {
 	
+	@Autowired
 	private CreacionInformeFinanciero nuevoInforme;
 	
 	public Comerciante() {
 		
 	}
 	
-	@Autowired
+	/*@Autowired //Con constructor
 	public Comerciante(CreacionInformeFinanciero nuevoInforme) {
 		this.nuevoInforme = nuevoInforme;
-	}
+	}*/
+	
+	/*@Autowired //Con setter
+	public void setNuevoInforme(CreacionInformeFinanciero nuevoInforme) {
+		this.nuevoInforme = nuevoInforme;
+	}*/
 
 	@Override
 	public String getTareas() {
