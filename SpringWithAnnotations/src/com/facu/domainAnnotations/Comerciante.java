@@ -1,6 +1,7 @@
 package com.facu.domainAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.facu.interfaces.CreacionInformeFinanciero;
@@ -15,7 +16,10 @@ import com.facu.interfaces.Empleados;
 @Component
 public class Comerciante implements Empleados {
 	
+	//@Qualifier: Se utiliza para identificar el id del bean 
+	//que necesitamos inyectar, en el caso de que haya muchas clases que implementa la interfaz principal
 	@Autowired
+	@Qualifier("informeFinancieroTrim4") 
 	private CreacionInformeFinanciero nuevoInforme;
 	
 	public Comerciante() {
