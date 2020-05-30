@@ -17,6 +17,10 @@ public class Comerciante implements Empleados {
 	
 	private CreacionInformeFinanciero nuevoInforme;
 	
+	public Comerciante() {
+		
+	}
+	
 	@Autowired
 	public Comerciante(CreacionInformeFinanciero nuevoInforme) {
 		this.nuevoInforme = nuevoInforme;
