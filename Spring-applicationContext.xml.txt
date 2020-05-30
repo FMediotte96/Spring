@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=" 
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+1. Cargar archivo XML
+2. Pedir el Bean
+3. Utilizar el Bean
+4. Cerrar el XML
+
+¿Qué es la inyección de dependencias?
+
+Libro de texto: el cliente delega con llamadas a otro objeto la responsabilidad de proporcionar sus dependencias.
+
+Wikipedia: Patrón de diseño orientado a objetos en el que se suministran objetos a una clase en lugar de ser la propia clase la que cree dichos objetos.
+
+2 Formas fundamentales para crear D.I.
+
+1. Mediante un constructor
+2. Mediante un setter
+
+
+1. Mediante un constructor:
+
+a. Crear la clase e interfaz de la dependencia
+b. Creación de constructor en la clase para la inyección de la dependencia.
+c. Configurar la inyección de dependencia en archivo XML (applicationContext.xml)
+		<constructor-arg ref="miInforme" />
+
+
+2. Mediante un setter:
+
+a. Se crea el objeto en la clase correspondiente con un set del mismo
+b. En el applicationContext.xml hacemos referencia a ese bean (ya creado) de la siguiente forma:
+		<property name="informeNuevo" ref="miInforme" />
+donde name es el nombre del setObjeto pero se escribe sin el set y con la primera letra en minuscula, y ref es la referencia al bean que queramos inyectar
+
+También se pueden inyectar atributos desde el applicationContext.xml creando los mismos en las clases con sus correspondientes setters y getters
+y luego en el applicationContext en el bean correspondiente setearlos de la siguiente manera: 
+		<property name="email" value="eqDirectivo@proyectospring.com" />
+
