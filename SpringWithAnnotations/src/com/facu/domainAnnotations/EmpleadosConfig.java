@@ -3,6 +3,7 @@ package com.facu.domainAnnotations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import com.facu.interfaces.CreacionInformeFinanciero;
 import com.facu.interfaces.Empleados;
@@ -19,6 +20,7 @@ import com.facu.interfaces.Empleados;
  */
 @Configuration
 @ComponentScan("com.facu.domainAnnotations")
+@PropertySource("classpath:datosEmpresa.properties")
 public class EmpleadosConfig {
 	
 	//Definir el bean para InformeFinancieroDtoCompras
