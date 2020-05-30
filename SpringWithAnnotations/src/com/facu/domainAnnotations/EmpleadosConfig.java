@@ -1,7 +1,11 @@
 package com.facu.domainAnnotations;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
+import com.facu.interfaces.CreacionInformeFinanciero;
+import com.facu.interfaces.Empleados;
 
 /**
  * Esta clase es utilizada a modo de configuracion del framework Spring y es el reemplazo mediante
@@ -16,5 +20,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("com.facu.domainAnnotations")
 public class EmpleadosConfig {
+	
+	//Definir el bean para InformeFinancieroDtoCompras
+	//el nombre del método es el id del Bean inyectado
+	@Bean
+	public CreacionInformeFinanciero informeFinancieroDtoCompras() { 
+		return new InformeFinancieroDtoCompras();
+	}
+	
+	//Definir el bean para DirectoFinanciero e inyectar dependencias
+	@Bean
+	public Empleados directorFinanciero() {
+		return new DirectorFinanciero(informeFinancieroDtoCompras());
+	}
 
 }

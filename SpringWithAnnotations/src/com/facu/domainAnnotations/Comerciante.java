@@ -55,13 +55,13 @@ public class Comerciante implements Empleados {
 	//Ejecución de código después de creación del Bean
 	@PostConstruct
 	public void init() {
-		System.out.println("Ejecutado tras creación de Bean");
+		//System.out.println("Ejecutado tras creación de Bean");
 	}
 	
 	//Ejecución de código después de apagado de contenedor Spring
 	@PreDestroy
 	public void destroy() {
-		System.out.println("Ejecutado antes de la destrucción");
+		//System.out.println("Ejecutado antes de la destrucción");
 	}
 
 }
