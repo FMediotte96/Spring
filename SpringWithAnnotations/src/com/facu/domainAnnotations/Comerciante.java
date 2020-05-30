@@ -2,6 +2,7 @@ package com.facu.domainAnnotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.facu.interfaces.CreacionInformeFinanciero;
@@ -14,6 +15,7 @@ import com.facu.interfaces.Empleados;
  */
 //Se puede obviar el nombre del component, en ese caso tomara el nombre de la clase
 @Component
+@Scope("prototype")
 public class Comerciante implements Empleados {
 	
 	//@Qualifier: Se utiliza para identificar el id del bean 
