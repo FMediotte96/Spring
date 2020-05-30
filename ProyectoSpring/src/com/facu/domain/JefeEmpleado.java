@@ -1,4 +1,7 @@
-package com.facu.IoC;
+package com.facu.domain;
+
+import com.facu.interfaces.CreacionInformes;
+import com.facu.interfaces.Empleados;
 
 /**
  * Inversión of Control

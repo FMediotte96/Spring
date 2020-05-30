@@ -2,7 +2,7 @@ package com.facu.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.facu.IoC.DirectorEmpleado;
+import com.facu.domain.DirectorEmpleado;
 /**
  * Clase Main
  * @author fmediotte

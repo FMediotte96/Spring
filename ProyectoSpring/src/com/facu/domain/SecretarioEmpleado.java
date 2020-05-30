@@ -1,25 +1,26 @@
-package com.facu.IoC;
+package com.facu.domain;
 
-public class DirectorEmpleado implements Empleados {
+import com.facu.interfaces.CreacionInformes;
+import com.facu.interfaces.Empleados;
 
-	//Creación de campo tipo CreacionInforme (interfaz)
+public class SecretarioEmpleado implements Empleados {
+	
 	private CreacionInformes informeNuevo;
 	private String email;
 	private String nombreEmpresa;
-	
-	//Creación de constructor que inyecta de dependencia
-	public DirectorEmpleado(CreacionInformes informeNuevo) {
+
+	public void setInformeNuevo(CreacionInformes informeNuevo) {
 		this.informeNuevo = informeNuevo;
 	}
 	
 	@Override
 	public String getTareas() {
-		return "Gestionar la plantilla de la empresa";
+		return "Gestionar la agenda de los Jefes";
 	}
 
 	@Override
 	public String getInforme() {
-		return "Informe creado por el Director: " + informeNuevo.getInforme();
+		return "Informe generado por el secretario " + informeNuevo.getInforme();
 	}
 
 	public String getEmail() {
@@ -37,5 +38,5 @@ public class DirectorEmpleado implements Empleados {
 	public void setNombreEmpresa(String nombreEmpresa) {
 		this.nombreEmpresa = nombreEmpresa;
 	}
-	
+
 }

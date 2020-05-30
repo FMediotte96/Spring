@@ -1,4 +1,4 @@
-package com.facu.IoC;
+package com.facu.interfaces;
 
 public interface Empleados {
 	
