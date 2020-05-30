@@ -1,5 +1,8 @@
 package com.facu.domainAnnotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -15,7 +18,7 @@ import com.facu.interfaces.Empleados;
  */
 //Se puede obviar el nombre del component, en ese caso tomara el nombre de la clase
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class Comerciante implements Empleados {
 	
 	//@Qualifier: Se utiliza para identificar el id del bean 
@@ -47,6 +50,18 @@ public class Comerciante implements Empleados {
 	public String getInforme() {
 		//return "Informe generado por el comerciante";
 		return nuevoInforme.getInformeFinanciero();
+	}
+	
+	//Ejecución de código después de creación del Bean
+	@PostConstruct
+	public void init() {
+		System.out.println("Ejecutado tras creación de Bean");
+	}
+	
+	//Ejecución de código después de apagado de contenedor Spring
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Ejecutado antes de la destrucción");
 	}
 
 }
