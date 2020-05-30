@@ -11,13 +11,20 @@
 	<!-- Creación de la dependencia -->
 	<bean id="miInforme" class="com.facu.IoC.Informe" />
 	
-	<!-- Uso esta inyección cuando lo uso en modo constructo -->
-	<bean id="miEmpleado" class="com.facu.IoC.JefeEmpleado"> 
+	<!-- Uso esta inyección cuando lo uso en modo constructor -->
+	<bean id="miEmpleado" class="com.facu.IoC.DirectorEmpleado"> 
 		<constructor-arg ref="miInforme" />
+		<!-- Inyeccion de atributos -->
+		<property name="email" value="eqDirectivo@proyectospring.com" />
+		<property name="nombreEmpresa" value="Proyecto Spring" />
 	</bean>
 	
 	<!-- Uso esta inyección cuando lo uso en modo setter -->
 	<bean id="miSecretarioEmpleado" class="com.facu.IoC.SecretarioEmpleado">
+		<!-- Inyeccion por setter -->
 		<property name="informeNuevo" ref="miInforme" />
+		<!-- Inyeccion de atributos -->
+		<property name="email" value="secretaria@proyectospring.com" />
+		<property name="nombreEmpresa" value="Proyecto Spring" />
 	</bean>
 </beans>
