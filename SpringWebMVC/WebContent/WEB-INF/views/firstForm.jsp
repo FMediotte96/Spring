@@ -9,7 +9,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<form action="processForm" method="get">
+	<form action="otherProcessForm" method="get">
 		<input type="text" name="nombre">
 		<input type="submit" class="btn btn-primary">
 	</form>

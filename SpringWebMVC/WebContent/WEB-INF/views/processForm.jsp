@@ -10,5 +10,9 @@
 
 Hola ${param.nombre}
 
+<br> 
+<h2>El usuario logueado es:</h2> 
+${msjUser}
+
 </body>
 </html>
