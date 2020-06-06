@@ -9,6 +9,6 @@
 <body>
 	<h1>Ejemplo main.jsp MVC SPRING</h1>
 	
-	<a href="showForm">Ir al formulario</a>
+	<a href="secundario/showForm">Ir al formulario</a>
 </body>
 </html>
